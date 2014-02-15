@@ -2,6 +2,7 @@ __author__ = 'bigpalooka'
 
 def firstthing():
     print 'first thing'
+    print 'second thing'
 
 
 
