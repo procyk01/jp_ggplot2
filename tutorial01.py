@@ -7,4 +7,4 @@ def firstthing():
 
 
 if __name__ == "__main__":
-    main()
+    firstthing()
