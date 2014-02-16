@@ -48,6 +48,17 @@ qplot(carat, data=diamonds, geom="histogram", binwidth=0.01, xlim=c(0,3))
 qplot(carat, data=diamonds, geom="histogram", fill=color, xlim=c(0,3))
 qplot(carat, data=diamonds, geom="density", color=color, xlim=c(0,3))
 
-
 qplot(color, data=diamonds, geom="bar")
 qplot(color, data=diamonds, geom="bar", weight=carat) + scale_y_continuous("carat")
+
+
+qplot(date, unemploy/pop, data=economics, geom="line")
+qplot(date, uempmed, data=economics, geom="line")
+
+year <- function(x) as.POSIXlt(x)$year + 1900
+qplot(unemploy/pop, uempmed, data=economics, geom=c("point","path"))
+qplot(unemploy/pop, uempmed, data=economics, geom="path", color=year(date))+scale_area()
+
+qplot(carat, data=diamonds, facets=color~., geom="histogram", binwidth=0.01, xlim=c(0,3))
+qplot(carat, ..density.., data=diamonds, facets=color~., geom="histogram", binwidth=0.01, xlim=c(0,3))
+
