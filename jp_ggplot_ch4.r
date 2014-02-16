@@ -69,5 +69,5 @@ boysbox
 
 p <- ggplot(diamonds,aes(carat))
 p <- p + geom_bar(aes(color=cut, fill=cut))
-p <- p + geom_histogram(aes(y=..density.., color=cut, fill=cut), binwidth=0.1)
+p <- p + geom_histogram(aes(y=..density.., color=cut,fill=cut), binwidth=0.1)
 p 
